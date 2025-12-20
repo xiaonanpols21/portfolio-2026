@@ -1,9 +1,10 @@
 import Link from "next/link";
+import styles from "./header.module.css";
 
 export default function Header() {
     return (
         <>
-            <nav>
+            <nav className={`${styles.nav}`}>
                 <Link href="/">Xiao NaN</Link>
                 <label aria-label="Menu knop">
                     <input type="checkbox"/>
