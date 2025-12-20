@@ -1,17 +1,20 @@
 @import "../../styles/variables/variables";
 
-.nav {
+.header {
     position: fixed;
     left: 20px;
     right: 20px;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     padding: 10px 20px;
     background-color: $white;
     border: 1px solid $black;
     border-radius: 0px 20px 0px 20px;
 
-    a {
+    .logo {
         @include f18;
         text-decoration: none;
         color: $black;
@@ -25,54 +28,61 @@
             content: " }";
         }
     }
+}
 
-    label {
-        display: block;
-        position: relative;
-        width: 24px;
-        height: 24px;
+.hamburger {
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
 
-        &:has(input:checked) {
-            span {
-                &:nth-of-type(1) {
-                    transform:rotate(45deg);
-                }
-
-                &:nth-of-type(2) {
-                    opacity: 0;
-                }
-
-                &:nth-of-type(3) {
-                    transform:rotate(-45deg);
-                }
-            }
-        }
-
-        input {
-            position: absolute;
-            opacity: 0;
-            pointer-events: all;
-        }
-
-
+    &:has(input:checked) {
         span {
-            position:absolute;
-            top: 60%;
-            left: 15%;
-            display:block;
-            width: 70%;
-            height: 2px;
-            background-color: $black;
-            transition: .4s;
-
             &:nth-of-type(1) {
-                transform:translatey(-6px);
+                transform:rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
             }
 
             &:nth-of-type(3) {
-                transform:translatey(6px);
+                transform:rotate(-45deg);
             }
+        }
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        pointer-events: all;
+    }
+
+
+    span {
+        position:absolute;
+        top: 60%;
+        left: 15%;
+        display:block;
+        width: 70%;
+        height: 2px;
+        background-color: $black;
+        transition: .4s;
+
+        &:nth-of-type(1) {
+            transform:translatey(-6px);
+        }
+
+        &:nth-of-type(3) {
+            transform:translatey(6px);
         }
     }
 }
 
+/***************************** Breakpoints *****************************/
+
+@media (min-width: 768px) { 
+    .hamburger {
+        display: none;
+    }
+}

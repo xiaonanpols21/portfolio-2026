@@ -1,0 +1,34 @@
+@import "../../styles/variables/variables";
+
+.navDesktop {
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 50px;
+
+        li {
+            list-style: none;
+
+            a {
+                @include f18;
+                display: block;
+                font-weight: bold;
+                text-decoration: none;
+                color: $black;
+            }
+
+            .active {
+                background-color: $primaire;
+                color: $white;
+                padding: 5px 15px;
+                border-radius: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) { 
+    .navDesktop {
+        display: none;
+    }
+}
