@@ -1,5 +1,13 @@
+/***************************** Colors *****************************/
+/***************************** Font *****************************/
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #FBE4E9;
+  padding: 30px 20px;
 }/*# sourceMappingURL=index.css.map */

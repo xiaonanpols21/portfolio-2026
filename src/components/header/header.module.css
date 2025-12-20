@@ -1,1 +1,62 @@
-/*# sourceMappingURL=header.module.css.map */
+/***************************** Colors *****************************/
+/***************************** Font *****************************/
+.nav {
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #22162A;
+  border-radius: 0px 20px 0px 20px;
+}
+.nav a {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  text-decoration: none;
+  color: #22162A;
+  font-weight: bold;
+}
+.nav a:before {
+  content: "{ ";
+}
+.nav a:after {
+  content: " }";
+}
+.nav label {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+.nav label:has(input:checked) span:nth-of-type(1) {
+  transform: rotate(45deg);
+}
+.nav label:has(input:checked) span:nth-of-type(2) {
+  opacity: 0;
+}
+.nav label:has(input:checked) span:nth-of-type(3) {
+  transform: rotate(-45deg);
+}
+.nav label input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: all;
+}
+.nav label span {
+  position: absolute;
+  top: 60%;
+  left: 15%;
+  display: block;
+  width: 70%;
+  height: 2px;
+  background-color: #22162A;
+  transition: 0.4s;
+}
+.nav label span:nth-of-type(1) {
+  transform: translatey(-6px);
+}
+.nav label span:nth-of-type(3) {
+  transform: translatey(6px);
+}/*# sourceMappingURL=header.module.css.map */

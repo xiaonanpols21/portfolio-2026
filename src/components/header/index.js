@@ -6,8 +6,10 @@ export default function Header() {
         <>
             <nav className={`${styles.nav}`}>
                 <Link href="">Xiao NaN</Link>
+
                 <label aria-label="Menu knop">
                     <input type="checkbox"/>
+
                     <span></span>
                     <span></span>
                     <span></span>

@@ -1,4 +1,4 @@
-$font-stack: 'Ubuntu', sans-serif;
+
 
 /***************************** Colors *****************************/
 
@@ -12,3 +12,12 @@ $yellow: #F8C631;
 
 $black: #22162A;
 $white: #fff;
+
+/***************************** Font *****************************/
+
+$font-stack: 'Ubuntu', sans-serif;
+
+@mixin f18 {
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+}
