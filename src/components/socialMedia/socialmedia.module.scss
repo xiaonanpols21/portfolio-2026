@@ -1,0 +1,18 @@
+@import "../../styles/variables/variables";
+
+.link {
+    position: relative;
+    display: block;
+    background-color: $pink;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 1px solid $black;
+
+    img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

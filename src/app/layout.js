@@ -1,5 +1,5 @@
 import { Ubuntu } from "next/font/google";
-import Header from "@/components/header";
+import Header from "@/components/menu/header";
 import "../styles/index/index.scss";
 
 const ubuntu = Ubuntu({

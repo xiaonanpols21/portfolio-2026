@@ -26,3 +26,13 @@ $font-stack: 'Ubuntu', sans-serif;
     font-size: 2.125rem;
     line-height: 2.313rem;
 }
+
+@mixin xiaoBA {
+    &:before {
+        content: "{ ";
+    }
+
+    &:after {
+        content: " }";
+    }
+}

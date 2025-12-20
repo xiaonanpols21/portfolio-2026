@@ -1,4 +1,4 @@
-@import "../../styles/variables/variables";
+@import "../../../styles/variables/variables";
 
 .header {
     position: fixed;
@@ -21,13 +21,7 @@
         color: $black;
         font-weight: bold;
 
-        &:before {
-            content: "{ ";
-        }
-
-        &:after {
-            content: " }";
-        }
+        @include xiaoBA;
     }
 }
 
@@ -85,6 +79,7 @@
 }
 
 /***************************** Breakpoints *****************************/
+
 @media (min-width: 768px) { 
     .hamburger {
         display: none;
