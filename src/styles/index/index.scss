@@ -10,6 +10,12 @@ body {
 	font-family: $font-stack;
 	background-color: $pink-10;
 	padding: 30px 20px;
+
+	&:has(.hamburger input:checked) {
+		.mobile-menu {
+			display: block;
+		}
+	}
 }
 
 .visually-hidden {
@@ -21,3 +27,4 @@ body {
 	white-space: nowrap;
 	width: 1px;
 }
+

@@ -9,16 +9,14 @@ export default function Header() {
             <header className={`${styles.header}`}>
                 <Link href="/" className={`${styles.logo}`}>Xiao NaN</Link>
 
-                <label aria-label="Menu knop" className={`${styles.hamburger}`}>
+                <label aria-label="Menu knop" className={`hamburger ${styles.hamburger}`}>
                     <input type="checkbox"/>
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
 
-                <NavLink
-                    classes={styles.navList}
-                />
+                <NavLink classes={styles.navList}/>
             </header>
             
             <NavMobile classes={styles.navMobile}/>

@@ -11,6 +11,9 @@ body {
   background-color: #FBE4E9;
   padding: 30px 20px;
 }
+body:has(.hamburger input:checked) .mobile-menu {
+  display: block;
+}
 
 .visually-hidden {
   clip: rect(0 0 0 0);
