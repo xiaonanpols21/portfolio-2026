@@ -68,4 +68,9 @@
   .hamburger {
     display: none;
   }
+}
+@media (max-width: 768px) {
+  .navList {
+    display: none;
+  }
 }/*# sourceMappingURL=header.module.css.map */

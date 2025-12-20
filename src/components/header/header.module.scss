@@ -80,9 +80,14 @@
 }
 
 /***************************** Breakpoints *****************************/
-
 @media (min-width: 768px) { 
     .hamburger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) { 
+    .navList {
         display: none;
     }
 }

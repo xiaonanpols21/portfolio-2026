@@ -1,5 +1,5 @@
 import Link from "next/link";
-import NavDesktop from "../navDesktop";
+import NavLink from "../navLink";
 import NavMobile from "../navMobile";
 import styles from "./header.module.scss";
 
@@ -16,7 +16,9 @@ export default function Header() {
                     <span></span>
                 </label>
 
-                <NavDesktop/>
+                <NavLink
+                    classes={styles.navList}
+                />
             </header>
             <NavMobile/>
         </>
