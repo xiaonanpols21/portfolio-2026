@@ -21,3 +21,8 @@ $font-stack: 'Ubuntu', sans-serif;
     font-size: 1.125rem;
     line-height: 1.875rem;
 }
+
+@mixin f34 {
+    font-size: 2.125rem;
+    line-height: 2.313rem;
+}

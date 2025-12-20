@@ -13,6 +13,7 @@
     background-color: $white;
     border: 1px solid $black;
     border-radius: 0px 20px 0px 20px;
+    z-index: 1;
 
     .logo {
         @include f18;
@@ -61,7 +62,7 @@
 
     span {
         position:absolute;
-        top: 60%;
+        top: 50%;
         left: 15%;
         display:block;
         width: 70%;
@@ -77,6 +78,10 @@
             transform:translatey(6px);
         }
     }
+}
+
+.navMobile {
+    display: none;
 }
 
 /***************************** Breakpoints *****************************/

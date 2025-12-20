@@ -20,7 +20,8 @@ export default function Header() {
                     classes={styles.navList}
                 />
             </header>
-            <NavMobile/>
+            
+            <NavMobile classes={styles.navMobile}/>
         </>
     )
 }

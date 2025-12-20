@@ -1,6 +1,6 @@
 @import "../../styles/variables/variables";
 
-.navDesktop {
+.nav {
     ul {
         display: flex;
         align-items: center;
@@ -27,8 +27,28 @@
     }
 }
 
-// @media (max-width: 768px) { 
-//     .navDesktop {
-//         display: none;
-//     }
-// }
+@media (max-width: 768px) { 
+    .nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: $white;
+
+        ul {
+            flex-direction: column;
+            margin-top: calc(52px + 30px + 100px); // Height header + padding body + 100px
+
+            li {
+                a {
+                    @include f34;
+                }
+
+                .active {
+                    padding: 15px 30px;
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,10 @@
-import NavDesktop from "../navLink"
+import NavLink from "../navLink"
 
-export default function NavMobile() {
+export default function NavMobile({classes}) {
     return (
-        <section>
+        <section className={`${classes}`}>
             <h3 className="visually-hidden">Menu mobiel</h3>
-            <NavDesktop/>
+            <NavLink/>
         </section>
     )
 }
