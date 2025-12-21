@@ -13,9 +13,19 @@ $yellow: #F8C631;
 $black: #22162A;
 $white: #fff;
 
+/***************************** Component lines *****************************/
+
+$trans-basic: .4s;
+$border-basic: 1px solid $black;
+
 /***************************** Font *****************************/
 
 $font-stack: 'Ubuntu', sans-serif;
+
+@mixin f14 {
+    font-size: 0.875rem;
+    line-height: 1.438rem;
+}
 
 @mixin f16 {
     font-size: 1rem;
@@ -25,6 +35,11 @@ $font-stack: 'Ubuntu', sans-serif;
 @mixin f18 {
     font-size: 1.125rem;
     line-height: 1.875rem;
+}
+
+@mixin f26 {
+    font-size: 1.625rem;
+    line-height: 1.938rem;
 }
 
 @mixin f34 {
@@ -37,8 +52,63 @@ $font-stack: 'Ubuntu', sans-serif;
     line-height: 3.75rem;
 }
 
+/***************************** Buttons *****************************/
 
-/***************************** Componenten *****************************/
+@mixin tag {
+    @include f16;
+    background-color: $secundaire;
+    padding: 5px 15px;
+    border-radius: 50px;
+    color: $white;
+}
+
+@mixin arrowBtn {
+    @include f18;
+    position: relative;
+    display: block;
+    width: calc(123px + 40px);
+    padding: 10px 20px;
+    background-color: $primaire;
+
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    border-radius: 50px;
+    font-weight: bold;
+    color: $white;
+    text-decoration: none;
+
+    &:before {
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        width: 48px;
+        aspect-ratio: 1/1;
+        background-color: $yellow;
+        border-radius: 50px;
+        border: $border-basic;
+    }
+
+    &:after {
+        position: absolute;
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%);
+        content: "";
+        background-image: url("/img/icons/arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 24px;
+        aspect-ratio: 1/1;
+    }
+}
+
+/***************************** Component mixins *****************************/
 
 // Font
 @mixin xiaoBA {
@@ -70,4 +140,12 @@ $font-stack: 'Ubuntu', sans-serif;
         outline-offset: 5px;
         border-radius: 10px;
     }
+}
+
+/***************************** Forms *****************************/
+
+@mixin hideInput {
+    position: absolute;
+    opacity: 0;
+    pointer-events: all;
 }

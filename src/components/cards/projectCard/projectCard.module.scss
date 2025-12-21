@@ -1,0 +1,33 @@
+@use "../../../styles/variables/variables" as *;
+
+.article {
+    @include flex(column, 30px);
+    padding: 20px;
+    background-color: $white;
+    border: $border-basic;
+    border-radius: 0px 20px 0px 20px;
+
+    h2 {
+        @include f26;
+    }
+
+    p {
+        @include f14;
+        margin-top: -30px
+    }
+
+    .link {
+       @include arrowBtn;
+    }
+}
+
+.tags {
+    @include flex(row, 5px);
+    order: -1;
+
+    li {
+        @include tag;
+        @include f14;
+        padding: 3px 15px;
+    }
+}

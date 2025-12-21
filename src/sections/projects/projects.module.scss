@@ -1,0 +1,39 @@
+@use "../../styles/variables/variables" as *;
+
+.section {
+    margin-top: 50px;
+}
+
+.form {
+    @include flex(row, 10px);
+    padding: 10px;
+    width: fit-content;
+    background-color: $white;
+    border: $border-basic;
+    border-radius: 50px;
+
+    label {
+        @include tag;
+        background-color: $pink;
+        cursor: pointer;
+        transition: $trans-basic;
+
+        &:has(input:checked) {
+            background-color: $primaire;
+        }
+
+        &:hover {
+            background-color: $secundaire;
+        }
+    }
+
+    input {
+        @include hideInput;
+    }
+}
+
+.main {
+    ul li {
+        list-style: none;
+    }
+}
