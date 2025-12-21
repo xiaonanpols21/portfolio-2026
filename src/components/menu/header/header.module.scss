@@ -1,6 +1,7 @@
 @use "../../../styles/variables/variables" as *;
 
 .header {
+    @include max1600;
     position: fixed;
     top: 30px;
     left: 20px;
@@ -18,7 +19,7 @@
 
     .logo {
         @include f18;
-        @include tabStyle;
+        @include focus;
         text-decoration: none;
         color: $black;
         font-weight: bold;

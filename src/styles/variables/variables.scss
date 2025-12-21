@@ -58,7 +58,13 @@ $font-stack: 'Ubuntu', sans-serif;
     gap: $gap;
 }
 
-@mixin tabStyle {
+@mixin max1600 {
+    margin: auto;
+    max-width: 1600px;
+}
+
+// Tab users
+@mixin focus {
     &:focus {
         outline: 2px solid $black;
         outline-offset: 5px;

@@ -2,7 +2,10 @@
 
 .section {
     @include flex(column, 20px);
+    @include max1600;
     margin-top: calc(52px + 50px);
+
+
 
     h1 {
         @include f50;
@@ -11,5 +14,6 @@
 
     p {
         @include f16;
+        max-width: 500px;
     }
 }
