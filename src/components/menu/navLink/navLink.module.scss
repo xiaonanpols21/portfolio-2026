@@ -2,15 +2,16 @@
 
 .nav {
     ul {
-        display: flex;
+        @include flex(row, 50px);
         align-items: center;
-        gap: 50px;
+
 
         li {
             list-style: none;
 
             a {
                 @include f18;
+                @include tabStyle;
                 display: block;
                 font-weight: bold;
                 text-decoration: none;

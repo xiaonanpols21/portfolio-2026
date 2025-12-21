@@ -6,6 +6,7 @@ export default function Footer() {
     return (
         <footer className={`${styles.footer}`}>
             <div className={`${styles.divider}`}></div>
+            {/* TODO: Change to WP ACF data */}
             <ul>
                 <li>
                     <SocialMedia

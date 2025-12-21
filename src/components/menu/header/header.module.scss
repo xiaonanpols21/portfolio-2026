@@ -18,10 +18,10 @@
 
     .logo {
         @include f18;
+        @include tabStyle;
         text-decoration: none;
         color: $black;
         font-weight: bold;
-
         @include xiaoBA;
     }
 }

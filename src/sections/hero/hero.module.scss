@@ -1,0 +1,15 @@
+@use "../../styles/variables/variables" as *;
+
+.section {
+    @include flex(column, 20px);
+    margin-top: calc(52px + 50px);
+
+    h1 {
+        @include f50;
+        text-transform: uppercase;
+    }
+
+    p {
+        @include f16;
+    }
+}
