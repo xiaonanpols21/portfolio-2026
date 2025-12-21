@@ -15,6 +15,10 @@ body {
 	&:has(.hamburger input:checked) {
 		.mobile-menu {
 			display: block;
+
+			@media (min-width: 768px) {
+				display: none;
+			}
 		}
 	}
 }
@@ -30,8 +34,3 @@ body {
 }
 
 
-@media (max-width: 768px) {
- 	.mobile-menu {
-		display: block;
-	}
-}
