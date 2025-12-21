@@ -1,7 +1,8 @@
-@import "../../../styles/variables/variables";
+@use "../../../styles/variables/variables" as *;
 
 .header {
     position: fixed;
+    top: 30px;
     left: 20px;
     right: 20px;
 

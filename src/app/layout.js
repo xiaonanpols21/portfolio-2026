@@ -16,10 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="nl">
-      <body className={ubuntu.className}>
-        {children}
-        <Header/>
-      </body>
+        <body className={ubuntu.className}>
+            {children}
+            <Header/>
+        </body>
     </html>
   );
 }
