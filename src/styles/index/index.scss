@@ -33,6 +33,12 @@ body {
 	width: 1px;
 }
 
+.swiper-slide {
+	max-width: 360px;
+}
+
+
+
 @media (min-width: 768px) {
     body {
 		padding: 0px;

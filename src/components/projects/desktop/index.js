@@ -12,10 +12,18 @@ export default function Desktop() {
         <main className={`${styles.main}`}>
             {/* Bron: https://codesandbox.io/p/sandbox/xw8sfx?file=/src/App.jsx */}
              <Swiper
-                    slidesPerView={3}
+                    slidesPerView={'auto'}
+                    slidesOffsetBefore={20}
+                    slidesOffsetAfter={20}
+                    breakpoints={{
+                        1300: {
+                            slidesOffsetBefore: "25%",
+                            slidesOffsetAfter: "25%",
+                        },
+                    }}
                     spaceBetween={30}
                     pagination={{
-                    clickable: true,
+                        clickable: true,
                     }}
                     modules={[Pagination, Navigation]}
                     navigation={true}
@@ -27,7 +35,7 @@ export default function Desktop() {
                     <SwiperSlide><ProjectCard/></SwiperSlide>
                     <SwiperSlide><ProjectCard/></SwiperSlide>
                     <SwiperSlide><ProjectCard/></SwiperSlide>
-                </Swiper>
+            </Swiper>
         </main>
     )
 }
