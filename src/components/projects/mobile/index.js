@@ -1,7 +1,7 @@
 import ProjectCard from "@/components/cards/projectCard";
-import styles from "./main.module.scss";
+import styles from "./mobile.module.scss";
 
-export default function MainMobile() {
+export default function Mobile() {
     return (
         <main className={`${styles.main}`}>
             <ul>

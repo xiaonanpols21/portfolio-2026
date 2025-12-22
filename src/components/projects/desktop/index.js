@@ -5,11 +5,12 @@ import ProjectCard from '@/components/cards/projectCard';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import styles from "./main.module.scss";
+import styles from "./desktop.module.scss";
 
-export default function MainDesktop() {
+export default function Desktop() {
     return (
         <main className={`${styles.main}`}>
+            {/* Bron: https://codesandbox.io/p/sandbox/xw8sfx?file=/src/App.jsx */}
              <Swiper
                     slidesPerView={3}
                     spaceBetween={30}

@@ -13,7 +13,7 @@ export default function ProjectCard() {
                     <li>Tag</li>
                     <li>Tag</li>
                 </ul>
-                <span className={`${styles.span}`}>Meer info</span>
+                <span className={`${styles.moreInfo}`}>Meer info</span>
                 <Image
                     src="/img/thumbnail.webp"
                     width={500}

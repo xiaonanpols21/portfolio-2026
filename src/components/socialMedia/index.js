@@ -4,7 +4,7 @@ import styles from "./socialmedia.module.scss";
 
 export default function SocialMedia({link, aria, img, alt}) {
     return (
-        <Link href={link} aria-label={aria} className={`${styles.link}`} target="_blank">
+        <Link href={link} aria-label={aria} className={`${styles.socialMeidaBtn}`} target="_blank">
             <Image
                 src={img}
                 width={24}

@@ -1,5 +1,5 @@
-import MainMobile from "../mainMobile";
-import MainDesktop from "../mainDesktop";
+import Mobile from "@/components/projects/mobile";
+import Desktop from "@/components/projects/desktop";
 import styles from "./projects.module.scss";
 
 export default function Projects() {
@@ -22,8 +22,8 @@ export default function Projects() {
             </form>
 
             {/* Projecten */}
-            <MainMobile/>
-            <MainDesktop/>
+            <Mobile/>
+            <Desktop/>
 
         </section>
     )

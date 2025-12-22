@@ -1,6 +1,6 @@
 @use "../../../styles/variables/variables" as *;
 
-.section {
+.hero {
     @include flex(column, 20px);
     @include maxWidthBasic;
     margin-top: calc(52px + 50px);
@@ -17,7 +17,7 @@
 }
 
 @media (min-width: 768px) {
-    .section {
+    .hero {
 		padding: 20px;
 	}
 }
