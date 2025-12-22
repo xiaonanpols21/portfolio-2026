@@ -33,3 +33,9 @@
         @include hideInput;
     }
 }
+
+@media (min-width: 768px) {
+    .section {
+        margin-top: calc(50px - 20px);
+    }
+}

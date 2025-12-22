@@ -15,12 +15,19 @@ export default function Desktop() {
                     slidesPerView={'auto'}
                     slidesOffsetBefore={20}
                     slidesOffsetAfter={20}
+
                     breakpoints={{
                         1300: {
-                            slidesOffsetBefore: "25%",
-                            slidesOffsetAfter: "25%",
+                            slidesOffsetBefore: "100"
+                        },
+                        1500: {
+                            slidesOffsetBefore: "200"
+                        },
+                        1900: {
+                            slidesOffsetBefore: "300"
                         },
                     }}
+
                     spaceBetween={30}
                     pagination={{
                         clickable: true,
