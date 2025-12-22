@@ -1,0 +1,7 @@
+@use "../../../styles/variables/variables" as *;
+
+@media (max-width: 768px) {
+    .main {
+        display: none;
+    }
+}

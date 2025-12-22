@@ -1,11 +1,9 @@
-@use "../../styles/variables/variables" as *;
+@use "../../../styles/variables/variables" as *;
 
 .section {
     @include flex(column, 20px);
-    @include max1600;
+    @include maxWidthBasic;
     margin-top: calc(52px + 50px);
-
-
 
     h1 {
         @include f50;
@@ -16,4 +14,10 @@
         @include f16;
         max-width: 500px;
     }
+}
+
+@media (min-width: 768px) {
+    .section {
+		padding: 20px;
+	}
 }

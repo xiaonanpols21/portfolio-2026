@@ -1,0 +1,36 @@
+@use "../../../styles/variables/variables" as *;
+
+.main {
+    margin-bottom: 50px;
+    
+    > ul {
+        @include flex(column, 30px);
+
+        li {
+            list-style: none;
+            
+            animation: scale linear both;
+            animation-timeline: view(y);
+        }
+    }
+}
+
+
+@keyframes scale {
+    0%{
+        scale: .8;
+        opacity: 0;
+    }
+    
+    25%{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .main {
+        display: none;
+    }
+}

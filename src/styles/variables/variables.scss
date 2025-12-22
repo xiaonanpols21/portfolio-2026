@@ -128,9 +128,9 @@ $font-stack: 'Ubuntu', sans-serif;
     gap: $gap;
 }
 
-@mixin max1600 {
+@mixin maxWidthBasic {
     margin: auto;
-    max-width: 1600px;
+    max-width: 1300px;
 }
 
 // Tab users

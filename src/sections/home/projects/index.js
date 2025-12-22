@@ -1,4 +1,5 @@
-import ProjectCard from "@/components/cards/projectCard";
+import MainMobile from "../mainMobile";
+import MainDesktop from "../mainDesktop";
 import styles from "./projects.module.scss";
 
 export default function Projects() {
@@ -20,13 +21,9 @@ export default function Projects() {
                 </label>
             </form>
 
-            <main className={`${styles.main}`}>
-                <ul>
-                    <li>
-                        <ProjectCard/>
-                    </li>
-                </ul>
-            </main>
+            {/* Projecten */}
+            <MainMobile/>
+            <MainDesktop/>
 
         </section>
     )

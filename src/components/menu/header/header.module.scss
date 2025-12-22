@@ -1,7 +1,7 @@
 @use "../../../styles/variables/variables" as *;
 
 .header {
-    @include max1600;
+    @include maxWidthBasic;
     position: fixed;
     top: 30px;
     left: 20px;

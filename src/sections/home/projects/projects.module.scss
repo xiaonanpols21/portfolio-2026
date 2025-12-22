@@ -1,6 +1,7 @@
-@use "../../styles/variables/variables" as *;
+@use "../../../styles/variables/variables" as *;
 
 .section {
+    @include flex(column, 30px);
     margin-top: 50px;
 }
 
@@ -29,11 +30,5 @@
 
     input {
         @include hideInput;
-    }
-}
-
-.main {
-    ul li {
-        list-style: none;
     }
 }
