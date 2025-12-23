@@ -54,9 +54,20 @@ body {
 	background-color: $yellow;
 	border-radius: 50px;
 	border: $border-basic;
+	transition: $trans-basic;
+
 	&:before {
 		@include arrow;
+		transition: $trans-basic;
     }
+
+	&:hover {
+		background-color: $pink;
+	}
+
+	&:hover::before {
+		filter: invert(1) brightness(3);
+	}
 	
 
 	svg {

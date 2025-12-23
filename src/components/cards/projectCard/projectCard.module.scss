@@ -15,6 +15,14 @@
         scale: 1.1;
     }
 
+    &:hover .moreInfo::before {
+        background-color: $pink;
+    }
+
+    &:hover .moreInfo::after {
+        filter: invert(1) brightness(3);
+    }
+
     h2 {
         @include f26;
     }
