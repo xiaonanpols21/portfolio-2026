@@ -1,0 +1,58 @@
+@use "../../../styles/variables" as *;
+
+// Bron: https://codepen.io/xiao-nan-pols/pen/BawyVKz
+.hamburger {
+    @include focus;
+    display: block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+
+    &:has(input:checked) {
+        span {
+            &:nth-of-type(1) {
+                transform:rotate(45deg);
+            }
+
+            &:nth-of-type(2) {
+                opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+                transform:rotate(-45deg);
+            }
+        }
+    }
+
+    input {
+        @include hideInput;
+    }
+
+
+    span {
+        position:absolute;
+        top: 50%;
+        left: 15%;
+        display:block;
+        width: 70%;
+        height: 2px;
+        background-color: $black;
+        transition: $trans-basic;
+
+        &:nth-of-type(1) {
+            transform:translatey(-6px);
+        }
+
+        &:nth-of-type(3) {
+            transform:translatey(6px);
+        }
+    }
+}
+
+/***************************** Breakpoints *****************************/
+
+@media (min-width: 768px) { 
+    .hamburger {
+        display: none;
+    }
+}
