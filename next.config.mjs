@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+    images: {
+      domains: ['xiaonan.nl'], // Add the domain here
+    },
 };
 
 export default nextConfig;

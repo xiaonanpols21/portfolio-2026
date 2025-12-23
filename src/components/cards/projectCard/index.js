@@ -2,24 +2,24 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./projectCard.module.scss";
 
-export default function ProjectCard() {
+export default function ProjectCard({title, goal, img, alt, data}) {
     return (
         <article className={`${styles.article}`}>
             <Link href="/">
-                <h2>Shift save</h2>
-                <p>Jonge supermarkt medewerkers motiveren om extra te gaan werken!</p>
+                <h2>{title}</h2>
+                <p>{goal}</p>
                 <ul className={`${styles.tags}`}>
-                    <li>Tag</li>
-                    <li>Tag</li>
-                    <li>Tag</li>
+                    {/* {data.acf.tags.map((item, key) => (
+                        <li key={key}>{item.tag}</li>
+                    ))} */}
                 </ul>
                 <span className={`${styles.moreInfo}`}>Meer info</span>
                 <div>
                     <Image
-                        src="/img/thumbnail.webp"
+                        src={img}
                         width={500}
                         height={500}
-                        alt="Picture of the author"
+                        alt={alt}
                     />
                 </div>
            
