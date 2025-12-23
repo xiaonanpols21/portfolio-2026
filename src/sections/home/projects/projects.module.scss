@@ -49,3 +49,16 @@
         margin-left: 20px;
     }
 }
+
+@media (max-width: 400px) {
+    .form {
+        flex-direction: column;
+        padding: 0px;
+        background-color: transparent;
+        border: 0px;
+
+        label {
+            width: fit-content;
+        }
+    }
+}

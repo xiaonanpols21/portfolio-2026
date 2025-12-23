@@ -8,17 +8,22 @@ export default async function Mobile() {
     return (
         <main className={`${styles.main}`}>
             <ul>
-                {data.map((item, key) => (
-                    <li key={key}>
-                        <ProjectCard
-                            title={item.title.rendered}
-                            goal={item.acf.goal}
-                            img={item.acf.images[0]}
-                            alt={item.title.rendered}
-                            data={item}
-                        />
-                    </li>
-                ))}
+                {data.map((item, key) => {
+                    const category = item.acf.category.join(",");
+
+
+                    return (
+                        <li key={key} className={`${category}`}>
+                            <ProjectCard
+                                title={item.title.rendered}
+                                goal={item.acf.goal}
+                                img={item.acf.images[0]}
+                                alt={item.title.rendered}
+                                data={item}
+                            />
+                        </li>
+                    )
+                })}
             </ul>
         </main>
     )

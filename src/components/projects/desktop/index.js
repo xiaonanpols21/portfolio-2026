@@ -47,11 +47,11 @@ export default function Desktop() {
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
                         <ProjectCard
-                        title={item.title.rendered}
-                        goal={item.acf.goal}
-                        img={item.acf.images[0]}
-                        alt={item.title.rendered}
-                        data={item}
+                            title={item.title.rendered}
+                            goal={item.acf.goal}
+                            img={item.acf.images[0]}
+                            alt={item.title.rendered}
+                            data={item}
                         />
                     </SwiperSlide>
                 ))}

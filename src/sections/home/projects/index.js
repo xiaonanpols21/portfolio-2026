@@ -9,7 +9,7 @@ export default function Projects() {
             <form className={`${styles.form}`}>
                 <label tabIndex={0}>
                     Alle projecten
-                    <input type="radio" name="filter" value="all"/>
+                    <input type="radio" name="filter" value="all" defaultChecked/>
                 </label>
                 <label tabIndex={0}>
                     Front-end

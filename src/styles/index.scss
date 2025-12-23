@@ -21,6 +21,12 @@ body {
 			}
 		}
 	}
+
+	    &:has([value="design"]:checked) {
+        .front-end {
+            display: none;
+        }
+    }
 }
 
 /***************************** Classes *****************************/

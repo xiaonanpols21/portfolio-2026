@@ -81,18 +81,7 @@ $font-stack: 'Ubuntu', sans-serif;
     display: block;
     width: calc(123px + 40px);
     padding: 10px 20px;
-    background-color: $primaire;
-
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border-radius: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.5),
-        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-        inset 0 0 16px 8px rgba(255, 255, 255, 0.8);
+    background-color: rgba($black, .4);
     overflow: hidden;
     border-radius: 50px;
     font-weight: bold;
