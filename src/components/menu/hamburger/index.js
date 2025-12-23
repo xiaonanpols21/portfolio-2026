@@ -3,6 +3,8 @@ import { useState } from "react";
 import styles from "./hamburger.module.scss";
 
 export default function Hamburger() {
+
+  // Learn Satates Scrimba Course
   const [checked, setChecked] = useState(false);
 
   const handleKeyDown = (e) => {

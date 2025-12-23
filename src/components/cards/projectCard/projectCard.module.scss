@@ -11,6 +11,10 @@
     color: $black;
     text-decoration: none;
 
+    &:hover img {
+        scale: 1.1;
+    }
+
     h2 {
         @include f26;
     }
@@ -25,15 +29,23 @@
        position: absolute;
        right: 30px;
        bottom: 20px;
+       z-index: 1;
+    }
+
+    div {
+        overflow: hidden;
+        margin: 0px -20px -20px -20px;
+        height: 160px;
+        width: calc(100% + 40px);
+        border: $border-basic;
     }
 
     img {
-        width: calc(100% + 40px);
-        height: 160px;
-        margin: 0px -20px -20px -20px;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 0px 0px 0px 20px;
-        border: $border-basic;
+        transition: $trans-basic;
     }
 }
 
