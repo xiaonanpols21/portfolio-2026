@@ -8,14 +8,17 @@
 .form {
     @include flex(row, 10px);
     @include marginSwiperAlign;
+    position: relative;
     padding: 10px;
     width: fit-content;
     background-color: $white;
     border: $border-basic;
     border-radius: 50px;
+    z-index: 2;
 
     label {
         @include tag;
+        @include focus;
         background-color: $pink;
         cursor: pointer;
         transition: $trans-basic;

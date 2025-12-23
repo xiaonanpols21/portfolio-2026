@@ -1,6 +1,7 @@
 @use "../../styles/variables" as *;
 
 .socialMeidaBtn {
+    @include focus;
     position: relative;
     display: block;
     background-color: $pink;

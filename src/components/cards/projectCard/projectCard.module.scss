@@ -2,6 +2,7 @@
 
 .article a {
     @include flex(column, 30px);
+    @include focus;
     position: relative;
     padding: 20px;
     background-color: $white;

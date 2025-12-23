@@ -7,15 +7,15 @@ export default function Projects() {
         <section className={`${styles.section}`}>
             <h2 className="visually-hidden">Mijn projecten</h2>
             <form className={`${styles.form}`}>
-                <label>
-                    All
+                <label tabIndex={0}>
+                    Alle projecten
                     <input type="radio" name="filter" value="all"/>
                 </label>
-                <label>
+                <label tabIndex={0}>
                     Front-end
                     <input type="radio" name="filter" value="front-end"/>
                 </label>
-                <label>
+                <label tabIndex={0}>
                     Design
                     <input type="radio" name="filter" value="design"/>
                 </label>
