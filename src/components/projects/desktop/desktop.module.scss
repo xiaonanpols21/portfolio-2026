@@ -1,9 +1,5 @@
 @use "../../../styles/variables" as *;
 
-.main {
-    margin-bottom: 50px;
-}
-
 @media (max-width: 768px) {
     .main {
         display: none;
