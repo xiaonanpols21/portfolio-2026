@@ -1,4 +1,4 @@
-@use "../variables/variables" as *;
+@use "./variables" as *;
 
 * {
 	margin: 0px;
@@ -23,6 +23,8 @@ body {
 	}
 }
 
+/***************************** Classes *****************************/
+
 .visually-hidden {
 	clip: rect(0 0 0 0);
 	clip-path: inset(50%);
@@ -33,11 +35,12 @@ body {
 	width: 1px;
 }
 
+// Swiper
 .swiper-slide {
 	max-width: 360px;
 }
 
-
+/***************************** Breakpoints *****************************/
 
 @media (min-width: 768px) {
     body {

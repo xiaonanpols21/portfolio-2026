@@ -1,8 +1,8 @@
-@use "../../../styles/variables/variables" as *;
+@use "../../../styles/variables" as *;
 
 .hero {
     @include flex(column, 20px);
-    @include maxWidthBasic;
+    @include marginSwiperAlign;
     margin-top: calc(52px + 50px);
 
     h1 {
@@ -15,6 +15,8 @@
         max-width: 500px;
     }
 }
+
+/***************************** Breakpoints *****************************/
 
 @media (min-width: 768px) {
     .hero {

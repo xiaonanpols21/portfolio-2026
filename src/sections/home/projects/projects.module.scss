@@ -1,4 +1,4 @@
-@use "../../../styles/variables/variables" as *;
+@use "../../../styles/variables" as *;
 
 .section {
     @include flex(column, 30px);
@@ -7,7 +7,7 @@
 
 .form {
     @include flex(row, 10px);
-    @include maxWidthBasic;
+    @include marginSwiperAlign;
     padding: 10px;
     width: fit-content;
     background-color: $white;
@@ -34,8 +34,14 @@
     }
 }
 
+/***************************** Breakpoints *****************************/
+
 @media (min-width: 768px) {
     .section {
         margin-top: calc(50px - 20px);
+    }
+
+    .form {
+        margin-left: 20px;
     }
 }

@@ -1,6 +1,6 @@
 import { Ubuntu } from "next/font/google";
 import Header from "@/components/menu/header";
-import "../styles/index/index.scss";
+import "../styles/index.scss";
 
 const ubuntu = Ubuntu({
   weight: ["400", "500", "700"],

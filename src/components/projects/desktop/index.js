@@ -1,9 +1,8 @@
 "use client";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import ProjectCard from '@/components/cards/projectCard';
 import 'swiper/css';
-import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import styles from "./desktop.module.scss";
 
@@ -16,6 +15,7 @@ export default function Desktop() {
                     slidesOffsetBefore={20}
                     slidesOffsetAfter={20}
 
+                    // Bron: Chat gpt
                     breakpoints={{
                         1300: {
                             slidesOffsetBefore: "100"
@@ -29,10 +29,7 @@ export default function Desktop() {
                     }}
 
                     spaceBetween={30}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Pagination, Navigation]}
+                    modules={[Navigation]}
                     navigation={true}
                     className="mySwiper"
                 >

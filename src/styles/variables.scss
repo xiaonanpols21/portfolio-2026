@@ -133,6 +133,20 @@ $font-stack: 'Ubuntu', sans-serif;
     max-width: 1300px;
 }
 
+@mixin marginSwiperAlign {
+    @media (min-width: 1300px) {
+        margin-left: 100px !important;
+    }
+
+    @media (min-width: 1500px) {
+        margin-left: 200px !important;
+    }
+
+    @media (min-width: 1900px) {
+        margin-left: 300px !important;
+    }
+}
+
 // Tab users
 @mixin focus {
     &:focus {
