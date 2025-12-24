@@ -13,7 +13,7 @@ export default function Filter() {
   };
 
   return (
-    <form className={styles.filter}>
+    <form className={styles.filter} aria-label="Filter projecten">
       <label tabIndex={0} onKeyDown={handleKeyDown("all")}
       >
         Alle projecten

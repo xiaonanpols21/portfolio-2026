@@ -9,7 +9,8 @@ export default function ProjectCard({title, goal, img, alt, data}) {
             <Link href="/">
                 <h2>{title}</h2>
                 <p>{goal}</p>
-                <ul className={`${styles.tags}`}>
+                {/* TODO: Change this to a component */}
+                <ul className={`${styles.tags}`} aria-label="Vaardigheden die in dit project zijn toegepast">
                     {data.acf.tags.map((item, key) => (
                         <li key={key}>{item.tag}</li>
                     ))}

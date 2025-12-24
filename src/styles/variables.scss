@@ -17,6 +17,7 @@ $white: #fff;
 
 $trans-basic: .4s;
 $border-basic: 1px solid $black;
+$margin-top: calc(52px + 50px);
 
 /***************************** Font *****************************/
 
@@ -86,7 +87,6 @@ $font-stack: 'Ubuntu', sans-serif;
     border-radius: 50px;
     font-weight: bold;
     color: $white;
-    text-decoration: none;
 
     &:before {
         position: absolute;

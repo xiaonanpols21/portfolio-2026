@@ -7,14 +7,12 @@
 
 
         li {
-            list-style: none;
 
             a {
                 @include f18;
                 @include focus;
                 display: block;
                 font-weight: bold;
-                text-decoration: none;
                 color: $black;
             }
 

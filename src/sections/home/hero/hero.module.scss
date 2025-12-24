@@ -3,7 +3,7 @@
 .hero {
     @include flex(column, 20px);
     @include marginSwiperAlign;
-    margin-top: calc(52px + 50px);
+    margin-top: $margin-top;
 
     h1 {
         @include f50;

@@ -1,0 +1,10 @@
+@use "../../../../styles/variables" as *;
+
+.gallery {
+    li {
+
+        img {
+            object-fit: cover;
+        }
+    }
+}

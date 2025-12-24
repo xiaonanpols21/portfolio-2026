@@ -1,0 +1,16 @@
+@use "../../../../styles/variables" as *;
+
+.main a {
+    height: 416px;
+
+    div {
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        display: none;
+    }
+}
+

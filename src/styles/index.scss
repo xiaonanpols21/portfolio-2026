@@ -29,6 +29,18 @@ body {
     }
 }
 
+ul li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+p {
+	@include f18;
+}
+
 /***************************** Classes *****************************/
 
 .visually-hidden {
@@ -99,6 +111,10 @@ body {
 @media (min-width: 768px) {
     body {
 		padding: 0px;
+	}
+
+	p {
+		@include f16;
 	}
 
 	.swiper {

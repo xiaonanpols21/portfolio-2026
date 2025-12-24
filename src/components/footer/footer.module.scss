@@ -10,10 +10,6 @@
     ul {
         @include flex(row, 20px);
         justify-content: center;
-
-        li {
-            list-style: none;
-        }
     }
 
     .divider {

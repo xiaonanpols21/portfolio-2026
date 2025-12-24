@@ -1,5 +1,5 @@
-import Mobile from "@/components/projects/mobile";
-import Desktop from "@/components/projects/desktop";
+import Mobile from "@/components/projects/homeProject/mobile";
+import Desktop from "@/components/projects/homeProject/desktop";
 import Filter from "@/components/projects/filter";
 import styles from "./projects.module.scss";
 

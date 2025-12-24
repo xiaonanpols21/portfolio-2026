@@ -1,0 +1,13 @@
+@use "../../styles/variables" as *;
+
+.main {
+    margin-top: $margin-top;
+}
+
+.tags {
+    @include flex(row, 5px);
+    
+    li {
+        @include tag;
+    }
+}
