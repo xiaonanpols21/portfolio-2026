@@ -1,6 +1,7 @@
 "use client";
 import { useRef, useState } from "react";
 import Image from "next/image";
+import Dialog from "../../dialog";
 import styles from "./gallery.module.scss";
 export default function Mobile({data}) {
     const dialogRef = useRef(null);
@@ -32,17 +33,14 @@ export default function Mobile({data}) {
                 ))}
             </ul>
 
-            <dialog ref={dialogRef} className={styles.dialog} aria-label="De gekozen afbeelding">
-                {selectedImage && (
-                    <Image
-                    src={selectedImage}
-                    width={300}
-                    height={300}
-                    alt={data.title.rendered}
-                    />
-                )}
-                <button aria-label="Sluit afbeelding" onClick={handleClose}></button>
-            </dialog>
+            <Dialog 
+                selectedImage={selectedImage} 
+                handleClose={handleClose}
+                dialogRef={dialogRef}
+                data={data}
+            />
+
+    
         </section>
 
 

@@ -1,44 +1,60 @@
+"use client";
+import { useState, useRef } from "react";
 import Image from "next/image";
+import Dialog from "../../dialog";
 import styles from "./gallery.module.scss";
-export default function Desktop() {
+export default function Desktop({data}) {
+    const dialogRef = useRef(null);  
+    const [selectedImage, setSelectedImage] = useState(data.acf.images[0]);
+
+    const changeImg = (img) => {
+        setSelectedImage(img); 
+    };
+
+    const handleOpen = (img) => {
+        setSelectedImage(img); 
+        dialogRef.current.showModal();
+    };
+
+    const handleClose = () => {
+        dialogRef.current.close(); 
+    }; 
+
     return (
         <section className={styles.section}>
             <h3 className="visually-hidden">Desktop gallerij</h3>
-            <Image
-                src="/img/thumbnail.webp"
-                width={500}
-                height={500}
-                alt="Picture of the author"
-                className={styles.heroImg}
-            />
+            {selectedImage && ( 
+                <>
+                    <Image
+                        src={selectedImage}
+                        width={500}
+                        height={500}
+                        alt={"Project foto Xiao Design"}
+                        className={styles.heroImg}
+                        onClick={() => handleOpen(selectedImage)}
+                    />
+
+                    <Dialog 
+                        selectedImage={selectedImage} 
+                        handleClose={handleClose}
+                        dialogRef={dialogRef}
+                        data={data}
+                    />
+                </>
+            )}
+
             <form className={styles.form}>
-                <label>
-                    <input type="radio"/>
-                       <Image
-                            src="/img/thumbnail.webp"
+                {data.acf.images.map((item, key) => (
+                    <label key={key}>
+                        <input type="radio"  onClick={() => changeImg(item)} />
+                        <Image
+                            src={item}
                             width={500}
                             height={500}
-                            alt="Picture of the author"
+                            alt={"Project foto Xiao Design"}
                         />
-                </label>
-                <label>
-                    <input type="radio"/>
-                       <Image
-                            src="/img/thumbnail.webp"
-                            width={500}
-                            height={500}
-                            alt="Picture of the author"
-                        />
-                </label>
-                <label>
-                    <input type="radio"/>
-                       <Image
-                            src="/img/thumbnail.webp"
-                            width={500}
-                            height={500}
-                            alt="Picture of the author"
-                        />
-                </label>
+                    </label>
+                ))}
             </form>
         </section>
     )

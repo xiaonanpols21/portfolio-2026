@@ -22,7 +22,7 @@ export default async function Project({params}) {
 
             {/* Gallery */}
             <Mobile data={item}/>
-            <Desktop/>
+            <Desktop data={item}/>
             
         </main>
     )
