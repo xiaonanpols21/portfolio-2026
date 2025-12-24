@@ -10,8 +10,6 @@ export default async function Mobile() {
             <ul>
                 {data.map((item, key) => {
                     const category = item.acf.category.join(",");
-
-
                     return (
                         <li key={key} className={`${category}`}>
                             <ProjectCard

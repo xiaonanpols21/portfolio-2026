@@ -44,17 +44,20 @@ export default function Desktop() {
                 className="mySwiper"
             >
 
-                {data.map((item) => (
-                    <SwiperSlide key={item.id}>
-                        <ProjectCard
-                            title={item.title.rendered}
-                            goal={item.acf.goal}
-                            img={item.acf.images[0]}
-                            alt={item.title.rendered}
-                            data={item}
-                        />
-                    </SwiperSlide>
-                ))}
+                {data.map((item) => {
+                    const category = item.acf.category.join(",");
+                    return (
+                        <SwiperSlide key={item.id} className={`${category}`}>
+                            <ProjectCard
+                                title={item.title.rendered}
+                                goal={item.acf.goal}
+                                img={item.acf.images[0]}
+                                alt={item.title.rendered}
+                                data={item}
+                            />
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
         </main>
     )
