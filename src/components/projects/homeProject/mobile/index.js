@@ -18,6 +18,7 @@ export default async function Mobile() {
                                 img={item.acf.images[0]}
                                 alt={item.title.rendered}
                                 data={item}
+                                slug={item.slug}
                             />
                         </li>
                     )

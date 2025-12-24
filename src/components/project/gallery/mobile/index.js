@@ -6,7 +6,7 @@ export default function Mobile() {
     const dialogRef = useRef(null);
 
     useEffect(() => {
-        dialogRef.current.showModal();
+        // dialogRef.current.showModal();
     }, []);
 
     const handleClose = () => {

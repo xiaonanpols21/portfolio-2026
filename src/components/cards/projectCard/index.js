@@ -3,10 +3,10 @@ import Image from "next/image";
 import styles from "./projectCard.module.scss";
 
 
-export default function ProjectCard({title, goal, img, alt, data}) {
+export default function ProjectCard({title, goal, img, alt, data, slug}) {
     return (
         <article className={`${styles.article}`} >
-            <Link href="/">
+            <Link href={`/projecten/${slug}`}>
                 <h2>{title}</h2>
                 <p>{goal}</p>
                 {/* TODO: Change this to a component */}
