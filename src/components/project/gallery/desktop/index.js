@@ -23,46 +23,44 @@ export default function Desktop({data}) {
     return (
         <section className={styles.section}>
             <h3 className="visually-hidden">Desktop gallerij</h3>
-            {selectedImage && ( 
-                <>
-                    <Image
-                        src={selectedImage}
-                        width={500}
-                        height={500}
-                        alt={"Project foto Xiao Design"}
-                        className={styles.heroImg}
-                        onClick={() => handleOpen(selectedImage)}
-                    />
+            <div className={styles.sticky}>
+                {selectedImage && ( 
+                    <>
+                        <Image
+                            src={selectedImage}
+                            width={500}
+                            height={500}
+                            alt={"Project foto Xiao Design"}
+                            className={styles.heroImg}
+                            onClick={() => handleOpen(selectedImage)}
+                        />
 
-                    <Dialog 
-                        selectedImage={selectedImage} 
-                        handleClose={handleClose}
-                        dialogRef={dialogRef}
-                        data={data}
-                    />
-                </>
-            )}
+                        <Dialog 
+                            selectedImage={selectedImage} 
+                            handleClose={handleClose}
+                            dialogRef={dialogRef}
+                            data={data}
+                        />
+                    </>
+                )}
 
-            {data.acf.images.length > 1 && (
-                <form className={styles.form}>
-                    {data.acf.images.map((item, key) => (
-                        <label key={key}>
-                            <input type="radio"  onClick={() => changeImg(item)} />
-                            <Image
-                                src={item}
-                                width={500}
-                                height={500}
-                                alt={"Project foto Xiao Design"}
-                            />
-                        </label>
-                    ))}
-                </form>
-            )}
-
-          
-       
-
-        
+                {data.acf.images.length > 1 && (
+                    <form className={styles.form}>
+                        {data.acf.images.map((item, key) => (
+                            <label key={key}>
+                                <input type="radio"  onClick={() => changeImg(item)} />
+                                <Image
+                                    src={item}
+                                    width={500}
+                                    height={500}
+                                    alt={"Project foto Xiao Design"}
+                                />
+                            </label>
+                        ))}
+                    </form>
+                )}
+            </div>
+    
         </section>
     )
 }

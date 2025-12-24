@@ -5,7 +5,11 @@
     @include maxWidthBasic;
     margin-top: $margin-top;
 
-    a {
+    h1 {
+        @include f50;
+    }
+
+    .demo {
         @include arrowBtn;
         background-color: $primaire;
     }
@@ -15,20 +19,50 @@
     margin-top: calc(-50px + 10px);
 }
 
+.progress {
+    @include flex(column, 20px);
+
+    h2 {
+        @include f16;
+        margin-bottom: -20px;
+    }
+
+    iframe {
+        width: 100%;
+    }
+
+    a {
+        text-decoration: underline;
+        color: $black;
+    }
+
+    .divDanger {
+        @include flex(column, 20px);
+    }
+}
+
 /***************************** Breakpoints *****************************/
 
 @media (min-width: 768px) {
     .main {
         @include grid-col(1fr 1fr, 40px 50px);
         padding: 20px;
+
+        h1 {
+            @include f67;
+        }
     }
 
-    .tags, .main a {
+    .tags, .demo {
         grid-column: 1/2;
     }
 
     .tags {
-        margin-top: calc(-50px + 20px);
+        margin-top: calc(-50px + 30px);
+    }
+
+    .progress h2 {
+        @include f18;
     }
 
 }

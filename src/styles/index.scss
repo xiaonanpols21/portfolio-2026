@@ -38,7 +38,7 @@ a {
 }
 
 p {
-	@include f18;
+	@include f16;
 }
 
 img {
@@ -109,6 +109,14 @@ img {
 	}
 }
 
+/***************************** Project *****************************/
+.bash {
+	@include f16;
+	background-color: $black;
+	color: $white;
+	border-radius: 10px;
+	padding: 20px;
+}
 
 /***************************** Breakpoints *****************************/
 
@@ -118,7 +126,7 @@ img {
 	}
 
 	p {
-		@include f16;
+		@include f18;
 	}
 
 	.swiper {

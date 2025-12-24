@@ -2,6 +2,7 @@
 
 .section {
     @include flex(column, 10px);
+    position: relative;
     grid-row: 1/5;
     grid-column: 2/3;
     
@@ -14,6 +15,12 @@
 
     img {
         border: $border-basic;
+    }
+
+    .sticky {
+        position: sticky;
+        top: calc(52px + 60px);
+        right: 0;
     }
 }
 
