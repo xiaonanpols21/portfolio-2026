@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Mobile from "@/components/project/gallery/mobile";
+import Desktop from "@/components/project/gallery/desktop";
 import styles from "./project.module.scss";
 
 export default async function Project({params}) {
@@ -18,9 +19,12 @@ export default async function Project({params}) {
                 <li>tag</li>
                 <li>tag</li>
             </ul>
-            
+
             <Link href="">Live demo</Link>
+
+            {/* Gallery */}
             <Mobile/>
+            <Desktop/>
             
         </main>
     )

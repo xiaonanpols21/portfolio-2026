@@ -41,6 +41,10 @@ p {
 	@include f18;
 }
 
+img {
+	object-fit: cover;
+}
+
 /***************************** Classes *****************************/
 
 .visually-hidden {

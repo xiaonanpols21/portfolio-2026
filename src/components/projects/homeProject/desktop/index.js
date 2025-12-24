@@ -54,6 +54,7 @@ export default function Desktop() {
                                 img={item.acf.images[0]}
                                 alt={item.title.rendered}
                                 data={item}
+                                slug={item.slug}
                             />
                         </SwiperSlide>
                     )

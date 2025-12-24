@@ -129,6 +129,12 @@ $font-stack: 'Ubuntu', sans-serif;
     gap: $gap;
 }
 
+@mixin grid-col($clmns, $gap) {
+    display: grid;
+    grid-template-columns: $clmns;
+    gap: $gap;
+}
+
 @mixin maxWidthBasic {
     margin: auto;
     max-width: 1300px;

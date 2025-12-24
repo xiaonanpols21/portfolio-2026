@@ -14,7 +14,8 @@ export default function Mobile() {
     };
 
     return (
-        <>
+        <section className={styles.section}>
+            <h3 className="visually-hidden">Mobile gallerij slider</h3>
             <ul className={styles.gallery}>
                 <li>
                     <Image
@@ -51,7 +52,8 @@ export default function Mobile() {
                 />
                 <button aria-label="Sluit afbeelding" onClick={handleClose}></button>
             </dialog>
-        </>
+        </section>
+
 
     )
 }

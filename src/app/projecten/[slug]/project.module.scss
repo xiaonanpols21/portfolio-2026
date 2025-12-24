@@ -2,6 +2,7 @@
 
 .main {
     @include flex(column, 50px);
+    @include maxWidthBasic;
     margin-top: $margin-top;
 
     a {
@@ -16,5 +17,18 @@
     
     li {
         @include tag;
+    }
+}
+
+/***************************** Breakpoints *****************************/
+
+@media (min-width: 768px) {
+    .main {
+        @include grid-col(1fr 1fr, 40px 50px);
+        padding: 20px;
+
+        .tags, a {
+            grid-column: 1/2;
+        }
     }
 }
