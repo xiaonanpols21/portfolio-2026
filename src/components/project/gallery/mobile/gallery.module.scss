@@ -1,10 +1,61 @@
 @use "../../../../styles/variables" as *;
 
 .gallery {
-    li {
+    @include flex(row, 0px);
+    order: -1;
+    overflow: auto;
+    margin: 0px -20px;
+    padding: 0px 30px 0px 20px;
+    scroll-snap-type: x mandatory;
 
-        img {
-            object-fit: cover;
-        }
+    // Bron: https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp
+    -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    // Bron: https://codepen.io/xiao-nan-pols/pen/RwObwMX?editors=1100
+    li {
+        scroll-snap-align: center;
+    }
+
+
+    img {
+        max-width: 300px;
+        object-fit: cover;
+        border-radius: $boder-radius-basic;
+        border: $border-basic;
+        box-shadow: 10px 10px 0px $white;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .gallery li {
+        // Bron: Chat gpt, Original: https://codepen.io/xiao-nan-pols/pen/RwObwMX?editors=1100
+        animation: scale-center linear both;
+        animation-timeline: view(x);
+        animation-range: entry 0% exit 100%;
+    }
+}
+
+@keyframes scale-center {
+  0% {
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+@media (min-width: 450px) {
+    .gallery {
+        gap: 20px;
     }
 }

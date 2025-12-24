@@ -1,11 +1,18 @@
 @use "../../styles/variables" as *;
 
 .main {
+    @include flex(column, 50px);
     margin-top: $margin-top;
+
+    a {
+        @include arrowBtn;
+        background-color: $primaire;
+    }
 }
 
 .tags {
     @include flex(row, 5px);
+    margin-top: calc(-50px + 10px);
     
     li {
         @include tag;

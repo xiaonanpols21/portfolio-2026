@@ -7,7 +7,7 @@
     padding: 20px;
     background-color: $white;
     border: $border-basic;
-    border-radius: 0px 20px 0px 20px;
+    border-radius: $boder-radius-basic;
     color: $black;
 
     &:hover img {

@@ -11,6 +11,38 @@ export default function Mobile() {
                     alt="Picture of the author"
                 />
             </li>
+            <li>
+                 <Image
+                    src="/img/thumbnail.webp"
+                    width={300}
+                    height={300}
+                    alt="Picture of the author"
+                />
+            </li>
+            <li>
+                 <Image
+                    src="/img/thumbnail.webp"
+                    width={300}
+                    height={300}
+                    alt="Picture of the author"
+                />
+            </li>
+            <li>
+                 <Image
+                    src="/img/thumbnail.webp"
+                    width={300}
+                    height={300}
+                    alt="Picture of the author"
+                />
+            </li>
+            <li>
+                 <Image
+                    src="/img/thumbnail.webp"
+                    width={300}
+                    height={300}
+                    alt="Picture of the author"
+                />
+            </li>
         </ul>
     )
 }
