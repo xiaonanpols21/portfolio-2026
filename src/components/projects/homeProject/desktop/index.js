@@ -9,57 +9,59 @@ import styles from "./desktop.module.scss";
 
 export default function Desktop() {
     const [data, setData] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         fetch('https://xiaonan.nl/wp-json/wp/v2/projects-2026?acf_format=standard')
             .then(response => response.json())
-            .then(data => setData(data));
+            .then(data => {
+                setData(data);
+                setLoading(false);
+            });
     }, []);
 
 
+
     return (
-        <main className={`${styles.main}`}>
-            {/* Bron: https://codesandbox.io/p/sandbox/xw8sfx?file=/src/App.jsx */}
-            <Swiper
-                slidesPerView={'auto'}
-                slidesOffsetBefore={20}
-                slidesOffsetAfter={20}
-
-                // Bron: Chat gpt
-                breakpoints={{
-                    1300: {
-                        slidesOffsetBefore: "100"
-                    },
-                    1500: {
-                        slidesOffsetBefore: "200"
-                    },
-                    1900: {
-                        slidesOffsetBefore: "300"
-                    },
-                }}
-
-                spaceBetween={30}
-                modules={[Navigation]}
-                navigation={true}
-                className="mySwiper"
-            >
-
-                {data.map((item) => {
-                    const category = item.acf.category.join(",");
-                    return (
-                        <SwiperSlide key={item.id} className={`${category}`}>
-                            <ProjectCard
-                                title={item.title.rendered}
-                                goal={item.acf.goal}
-                                img={item.acf.images[0]}
-                                alt={item.title.rendered}
-                                data={item}
-                                slug={item.slug}
-                            />
-                        </SwiperSlide>
-                    )
-                })}
-            </Swiper>
+        <main className={styles.main}>
+            {loading ? (
+                <div className={styles.loader}>
+                    <span className={styles.spinner}></span>
+                    <p>Projecten laden…</p>
+                </div>
+            ) : (
+                <Swiper
+                    slidesPerView="auto"
+                    slidesOffsetBefore={20}
+                    slidesOffsetAfter={20}
+                    breakpoints={{
+                        1300: { slidesOffsetBefore: 100 },
+                        1500: { slidesOffsetBefore: 200 },
+                        1900: { slidesOffsetBefore: 300 },
+                    }}
+                    spaceBetween={30}
+                    modules={[Navigation]}
+                    navigation
+                    className="mySwiper"
+                >
+                    {data.map((item) => {
+                        const category = item.acf.category.join(",");
+                        return (
+                            <SwiperSlide key={item.id} className={category}>
+                                <ProjectCard
+                                    title={item.title.rendered}
+                                    goal={item.acf.goal}
+                                    img={item.acf.images[0]}
+                                    alt={item.title.rendered}
+                                    data={item}
+                                    slug={item.slug}
+                                />
+                            </SwiperSlide>
+                        );
+                    })}
+                </Swiper>
+            )}
         </main>
+
     )
 }

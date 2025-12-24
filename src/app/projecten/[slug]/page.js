@@ -13,9 +13,7 @@ export default async function Project({params}) {
 
     const currentIndex = data.findIndex((item) => item.slug === slug);
 
-    const nextProject = currentIndex !== -1
-    ? data[(currentIndex + 1) % data.length] 
-    : null;
+    const nextProject = currentIndex !== -1 ? data[(currentIndex + 1) % data.length] : null;
 
     return (
         <main className={`${styles.main}`}>
