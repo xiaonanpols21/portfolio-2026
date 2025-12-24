@@ -12,12 +12,7 @@
 }
 
 .tags {
-    @include flex(row, 5px);
     margin-top: calc(-50px + 10px);
-    
-    li {
-        @include tag;
-    }
 }
 
 /***************************** Breakpoints *****************************/
@@ -26,9 +21,14 @@
     .main {
         @include grid-col(1fr 1fr, 40px 50px);
         padding: 20px;
-
-        .tags, a {
-            grid-column: 1/2;
-        }
     }
+
+    .tags, .main a {
+        grid-column: 1/2;
+    }
+
+    .tags {
+        margin-top: calc(-50px + 20px);
+    }
+
 }

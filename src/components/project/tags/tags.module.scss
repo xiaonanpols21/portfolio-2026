@@ -1,0 +1,10 @@
+@use "../../../styles/variables" as *;
+
+.tags {
+    @include flex(row, 10px);
+    flex-wrap: wrap;
+    
+    li {
+        @include tag;
+    }
+}

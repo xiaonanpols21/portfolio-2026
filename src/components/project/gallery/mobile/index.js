@@ -3,7 +3,6 @@ import { useRef, useEffect } from "react";
 import Image from "next/image";
 import styles from "./gallery.module.scss";
 export default function Mobile({data}) {
-    console.log(data.acf.images)
     const dialogRef = useRef(null);
 
     useEffect(() => {

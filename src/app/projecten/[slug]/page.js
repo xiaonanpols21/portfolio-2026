@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Mobile from "@/components/project/gallery/mobile";
 import Desktop from "@/components/project/gallery/desktop";
+import Tags from "@/components/project/tags";
 import styles from "./project.module.scss";
 
 export default async function Project({params}) {
@@ -14,11 +15,8 @@ export default async function Project({params}) {
         <main className={`${styles.main}`}>
             <h1>{item.title.rendered}</h1>
 
-            <ul className={`${styles.tags}`}>
-                <li>tag</li>
-                <li>tag</li>
-                <li>tag</li>
-            </ul>
+         
+            <Tags data={item} classes={styles.tags}/>
 
             <Link href="">Live demo</Link>
 
