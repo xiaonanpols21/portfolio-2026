@@ -1,25 +1,14 @@
 import Mobile from "@/components/projects/mobile";
 import Desktop from "@/components/projects/desktop";
+import Filter from "@/components/projects/filter";
 import styles from "./projects.module.scss";
 
 export default function Projects() {
     return (
         <section className={`${styles.section}`}>
             <h2 className="visually-hidden">Mijn projecten</h2>
-            <form className={`${styles.form}`}>
-                <label tabIndex={0}>
-                    Alle projecten
-                    <input type="radio" name="filter" value="all" defaultChecked/>
-                </label>
-                <label tabIndex={0}>
-                    Front-end
-                    <input type="radio" name="filter" value="front-end"/>
-                </label>
-                <label tabIndex={0}>
-                    Design
-                    <input type="radio" name="filter" value="design"/>
-                </label>
-            </form>
+            
+            <Filter/>
 
             {/* Projecten */}
             <Mobile/>

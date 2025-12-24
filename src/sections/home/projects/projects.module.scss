@@ -5,60 +5,11 @@
     margin-top: 50px;
 }
 
-.form {
-    @include flex(row, 10px);
-    @include marginSwiperAlign;
-    position: relative;
-    padding: 10px;
-    width: fit-content;
-    background-color: $white;
-    border: $border-basic;
-    border-radius: 50px;
-    z-index: 2;
-
-    label {
-        @include tag;
-        @include focus;
-        background-color: $pink;
-        cursor: pointer;
-        transition: $trans-basic;
-
-        &:has(input:checked) {
-            background-color: $primaire;
-        }
-
-        &:hover {
-            background-color: $secundaire;
-        }
-    }
-
-    input {
-        @include hideInput;
-    }
-}
-
 /***************************** Breakpoints *****************************/
 
 @media (min-width: 768px) {
     .section {
         margin-top: calc(50px - 20px);
         gap: 0px;
-    }
-
-    .form {
-        margin-left: 20px;
-    }
-}
-
-@media (max-width: 400px) {
-    .form {
-        flex-direction: column;
-        padding: 0px;
-        background-color: transparent;
-        border: 0px;
-
-        label {
-            width: fit-content;
-        }
     }
 }

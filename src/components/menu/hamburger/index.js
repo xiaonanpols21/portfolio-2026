@@ -3,16 +3,14 @@ import { useState } from "react";
 import styles from "./hamburger.module.scss";
 
 export default function Hamburger() {
+    const [checked, setChecked] = useState(false);
 
-  // Learn Satates Scrimba Course
-  const [checked, setChecked] = useState(false);
-
-  const handleKeyDown = (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      setChecked((prev) => !prev);
-    }
-  };
+    const handleKeyDown = (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setChecked((prev) => !prev);
+        }
+    };
 
   return (
     <label
@@ -21,14 +19,14 @@ export default function Hamburger() {
       tabIndex={0}
       onKeyDown={handleKeyDown}
     >
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={(e) => setChecked(e.target.checked)}
-      />
-      <span></span>
-      <span></span>
-      <span></span>
+        <input
+            type="checkbox"
+            checked={checked}
+            onChange={(e) => setChecked(e.target.checked)}
+        />
+        <span></span>
+        <span></span>
+        <span></span>
     </label>
   );
 }
