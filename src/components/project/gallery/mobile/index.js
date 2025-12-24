@@ -1,13 +1,15 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import styles from "./gallery.module.scss";
 export default function Mobile({data}) {
     const dialogRef = useRef(null);
+    const [selectedImage, setSelectedImage] = useState(null);
 
-    useEffect(() => {
-        // dialogRef.current.showModal();
-    }, []);
+    const handleOpen = (img) => {
+        setSelectedImage(img); 
+        dialogRef.current.showModal();
+    };
 
     const handleClose = () => {
         dialogRef.current.close(); 
@@ -24,18 +26,21 @@ export default function Mobile({data}) {
                             width={300}
                             height={300}
                             alt="Picture of the author"
+                            onClick={() => handleOpen(item)}
                         />
                     </li>
                 ))}
             </ul>
 
             <dialog ref={dialogRef} className={styles.dialog} aria-label="De gekozen afbeelding">
-                <Image
-                    src="/img/thumbnail.webp"
+                {selectedImage && (
+                    <Image
+                    src={selectedImage}
                     width={300}
                     height={300}
-                    alt="Picture of the author"
-                />
+                    alt={data.title.rendered}
+                    />
+                )}
                 <button aria-label="Sluit afbeelding" onClick={handleClose}></button>
             </dialog>
         </section>
