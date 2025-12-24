@@ -19,19 +19,31 @@ export default function Mobile({data}) {
     return (
         <section className={styles.section}>
             <h3 className="visually-hidden">Mobile gallerij slider</h3>
-            <ul className={styles.gallery}>
-                {data.acf.images.map((item, key) => (
-                    <li key={key}>
-                        <Image
-                            src={item}
-                            width={300}
-                            height={300}
-                            alt="Picture of the author"
-                            onClick={() => handleOpen(item)}
-                        />
-                    </li>
-                ))}
-            </ul>
+            {data.acf.images.length > 1 ? (
+                 <ul className={styles.gallery}>
+                    {data.acf.images.map((item, key) => (
+                        <li key={key}>
+                            <Image
+                                src={item}
+                                width={300}
+                                height={300}
+                                alt="Project afbeelding"
+                                onClick={() => handleOpen(item)}
+                            />
+                        </li>
+                    ))}
+                </ul>
+            ):(
+                <Image
+                    src={data.acf.images[0]}
+                    width={300}
+                    height={300}
+                    alt="Project afbeelding"
+                    onClick={() => handleOpen(data.acf.images[0])}
+                    className={styles.singleImg}
+                />
+            )}
+       
 
             <Dialog 
                 selectedImage={selectedImage} 

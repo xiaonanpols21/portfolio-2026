@@ -43,19 +43,26 @@ export default function Desktop({data}) {
                 </>
             )}
 
-            <form className={styles.form}>
-                {data.acf.images.map((item, key) => (
-                    <label key={key}>
-                        <input type="radio"  onClick={() => changeImg(item)} />
-                        <Image
-                            src={item}
-                            width={500}
-                            height={500}
-                            alt={"Project foto Xiao Design"}
-                        />
-                    </label>
-                ))}
-            </form>
+            {data.acf.images.length > 1 && (
+                <form className={styles.form}>
+                    {data.acf.images.map((item, key) => (
+                        <label key={key}>
+                            <input type="radio"  onClick={() => changeImg(item)} />
+                            <Image
+                                src={item}
+                                width={500}
+                                height={500}
+                                alt={"Project foto Xiao Design"}
+                            />
+                        </label>
+                    ))}
+                </form>
+            )}
+
+          
+       
+
+        
         </section>
     )
 }

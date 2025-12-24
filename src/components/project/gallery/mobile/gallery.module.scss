@@ -2,6 +2,12 @@
 
 .section {
     order: -1;
+
+    .singleImg {
+        width: 100%;
+        border: $border-basic;
+        border-radius: $boder-radius-basic;
+    }
 }
 
 .gallery {
