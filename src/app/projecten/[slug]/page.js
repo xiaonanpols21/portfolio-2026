@@ -23,7 +23,7 @@ export default async function Project({params}) {
             <Link href="">Live demo</Link>
 
             {/* Gallery */}
-            <Mobile/>
+            <Mobile data={item}/>
             <Desktop/>
             
         </main>
