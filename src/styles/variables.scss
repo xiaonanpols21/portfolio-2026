@@ -112,6 +112,14 @@ $font-stack: 'Ubuntu', sans-serif;
         @include arrow;
         transition: $trans-basic;
     }
+
+    &:hover::before {
+        background-color: $pink;
+    }
+
+    &:hover::after {
+        filter: invert(1) brightness(3);
+    }
 }
 
 /***************************** Component mixins *****************************/

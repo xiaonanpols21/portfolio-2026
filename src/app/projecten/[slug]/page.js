@@ -11,6 +11,12 @@ export default async function Project({params}) {
     const { slug } = await params;
     const item = data.find((item) => item.slug === slug);
 
+    const currentIndex = data.findIndex((item) => item.slug === slug);
+
+    const nextProject = currentIndex !== -1
+    ? data[(currentIndex + 1) % data.length] 
+    : null;
+
     return (
         <main className={`${styles.main}`}>
             <h1>{item.title.rendered}</h1>
@@ -32,6 +38,7 @@ export default async function Project({params}) {
                 <div className={`${styles.divDanger}`} dangerouslySetInnerHTML={{__html: item.acf.progress}}/>
             </section>
 
+            <Link href={`/projecten/${nextProject.slug}`} className={`${styles.nextProject}`}>Volgend project</Link>
             
         </main>
     )

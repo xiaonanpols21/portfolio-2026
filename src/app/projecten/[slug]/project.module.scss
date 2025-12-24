@@ -41,6 +41,14 @@
     }
 }
 
+.nextProject {
+    @include arrowBtn;
+    width: 218px;
+    margin-left: auto;
+    background-color: $primaire;
+    margin-bottom: 50px;
+}
+
 /***************************** Breakpoints *****************************/
 
 @media (min-width: 768px) {
@@ -63,6 +71,10 @@
 
     .progress h2 {
         @include f18;
+    }
+
+    .nextProject {
+        grid-column: 2/3;
     }
 
 }

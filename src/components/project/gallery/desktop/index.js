@@ -1,6 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Dialog from "../../dialog";
 import styles from "./gallery.module.scss";
 export default function Desktop({data}) {
@@ -60,7 +61,6 @@ export default function Desktop({data}) {
                     </form>
                 )}
             </div>
-    
         </section>
     )
 }

@@ -22,7 +22,7 @@ body {
 		}
 	}
 
-	    &:has([value="design"]:checked) {
+	&:has([value="design"]:checked) {
         .front-end {
             display: none;
         }
@@ -110,6 +110,7 @@ img {
 }
 
 /***************************** Project *****************************/
+
 .bash {
 	@include f16;
 	background-color: $black;
