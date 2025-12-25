@@ -1,3 +1,4 @@
+import { fetchProjects } from "@/js/fetchProjects";
 import Link from "next/link";
 import Mobile from "@/components/project/gallery/mobile";
 import Desktop from "@/components/project/gallery/desktop";
@@ -5,8 +6,7 @@ import Tags from "@/components/project/tags";
 import styles from "./project.module.scss";
 
 export default async function Project({params}) {
-    const fetchData = await fetch('https://xiaonan.nl/wp-json/wp/v2/projects-2026?acf_format=standard')
-    const data = await fetchData.json();
+    const data = await fetchProjects();
 
     const { slug } = await params;
     const item = data.find((item) => item.slug === slug);

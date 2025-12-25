@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
+import { sortByDate } from '@/js/sortByDate';
 import ProjectCard from '@/components/cards/projectCard';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -15,13 +16,7 @@ export default function Desktop() {
         fetch('https://xiaonan.nl/wp-json/wp/v2/projects-2026?acf_format=standard')
             .then(response => response.json())
             .then(data => {
-                const dateData = data.map((item) => ({
-                    ...item,
-                    date: new Date(item.date),
-                }));
-
-                const sortedData = dateData.sort((a, b) => a.date - b.date);
-
+                const sortedData = sortByDate(data);
                 setData(sortedData);
                 setLoading(false);
             });
