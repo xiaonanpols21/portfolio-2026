@@ -15,7 +15,14 @@ export default function Desktop() {
         fetch('https://xiaonan.nl/wp-json/wp/v2/projects-2026?acf_format=standard')
             .then(response => response.json())
             .then(data => {
-                setData(data);
+                const dateData = data.map((item) => ({
+                    ...item,
+                    date: new Date(item.date),
+                }));
+
+                const sortedData = dateData.sort((a, b) => a.date - b.date);
+
+                setData(sortedData);
                 setLoading(false);
             });
     }, []);
