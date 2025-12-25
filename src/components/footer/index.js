@@ -1,5 +1,5 @@
 
-import SocialMedia from "../socialMedia";
+import SocialMedia from "../socialMedia/circle";
 import styles from "./footer.module.scss";
 
 export default function Footer() {

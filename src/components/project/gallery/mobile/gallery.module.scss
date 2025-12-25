@@ -4,9 +4,8 @@
     order: -1;
 
     .singleImg {
+        @include imgBorder;
         width: 100%;
-        border: $border-basic;
-        border-radius: $boder-radius-basic;
     }
 }
 
@@ -28,7 +27,7 @@
         max-width: 300px;
         border-radius: $boder-radius-basic;
         border: $border-basic;
-        box-shadow: 10px 10px 0px $white;
+        box-shadow: $box-shadow-basic;
     }
 }
 

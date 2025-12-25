@@ -1,4 +1,4 @@
-@use "../../styles/variables" as *;
+@use "../../../styles/variables" as *;
 
 .socialMeidaBtn {
     @include focus;
@@ -11,9 +11,6 @@
     border: $border-basic;
 
     img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include centerTransform;
     }
 }

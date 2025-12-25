@@ -1,0 +1,39 @@
+@use "../../styles/variables" as *;
+
+.main {
+    @include flex(column, 50px);
+    margin-top: $margin-top;
+
+    h1 {
+        @include f50;
+    }
+
+    .meImg {
+        @include imgBorder;
+        height: 353px;
+        width: 100%;
+        order: -1;
+    }
+
+    .tags {
+        @include flex(row, 10px);
+        margin-top: calc(-50px + 10px);
+
+        li {
+            @include tag;
+        }
+    }
+}
+
+.content {
+    @include flex(column, 20px);
+    border: $border-basic;
+    border-radius: 20px;
+    background-color: $white;
+    padding: 20px;
+
+    h2 {
+        padding-bottom: 20px;
+        border-bottom: $border-basic;
+    }
+}

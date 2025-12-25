@@ -19,6 +19,7 @@ $trans-basic: .4s;
 $border-basic: 1px solid $black;
 $margin-top: calc(52px + 50px);
 $boder-radius-basic: 0px 20px 0px 20px;
+$box-shadow-basic: 10px 10px 0px $white;
 
 /***************************** Font *****************************/
 
@@ -167,6 +168,13 @@ $font-stack: 'Ubuntu', sans-serif;
     }
 }
 
+@mixin centerTransform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 // Tab users
 @mixin focus {
     &:focus {
@@ -184,6 +192,13 @@ $font-stack: 'Ubuntu', sans-serif;
     &::-webkit-scrollbar {
         display: none;
     }
+}
+
+// Img
+@mixin imgBorder {
+    border: $border-basic;
+    border-radius: $boder-radius-basic;
+    box-shadow: $box-shadow-basic;
 }
 
 /***************************** Forms *****************************/
