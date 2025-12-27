@@ -1,4 +1,5 @@
 import { Ubuntu } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next"
 import Header from "@/components/menu/header";
 import "../styles/index.scss";
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <body className={ubuntu.className}>
             {children}
             <Header/>
+            <Analytics/>
         </body>
     </html>
   );
