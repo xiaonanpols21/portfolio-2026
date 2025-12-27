@@ -20,6 +20,7 @@ $border-basic: 1px solid $black;
 $margin-top: calc(52px + 50px);
 $boder-radius-basic: 0px 20px 0px 20px;
 $box-shadow-basic: 10px 10px 0px $white;
+$filter-basic: invert(1) brightness(3);
 
 /***************************** Font *****************************/
 
@@ -124,7 +125,7 @@ $font-stack: 'Ubuntu', sans-serif;
     }
 
     &:hover::after {
-        filter: invert(1) brightness(3);
+        filter: $filter-basic;
     }
 }
 

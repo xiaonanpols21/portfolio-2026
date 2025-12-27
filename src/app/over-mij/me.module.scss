@@ -57,6 +57,7 @@
         background-color: $secundaire;
         border: $border-basic;
         border-radius: 20px;
+        cursor: pointer;
 
         &[open] summary:after {
             transform: rotate(45deg) translateY(-50%);
@@ -76,9 +77,18 @@
             background-color: $primaire;
         }
 
+        &:hover summary:before {
+            background-color: $pink;
+        }
+
+           &:hover summary:after {
+            filter: $filter-basic;
+        }
+
         summary {
-            position: relative;
+            @include focus;
             @include f24;
+            position: relative;
             list-style: none;
             font-weight: bold;
             color: $white;
@@ -93,6 +103,7 @@
                 background-color: $yellow;
                 border-radius: 50px;
                 border: $border-basic;
+                transition: $trans-basic;
             }
 
             &:after {

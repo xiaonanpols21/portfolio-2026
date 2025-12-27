@@ -19,7 +19,7 @@
     }
 
     &:hover .moreInfo::after {
-        filter: invert(1) brightness(3);
+        filter: $filter-basic;
     }
 
     h2 {
