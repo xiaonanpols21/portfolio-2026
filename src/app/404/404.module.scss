@@ -1,0 +1,30 @@
+@use "../../styles/variables" as *;
+
+.main {
+    position: relative;
+    height: 100vh;
+
+    h1 {
+        @include f67;
+    }
+
+    div {
+        @include centerTransform;
+        @include flex(column, 20px);
+    }
+
+    a {
+        @include focus;
+        @include arrowBtn;
+        background-color: $primaire;
+        width: calc(163px + 10px);
+
+        &:focus {
+            border-radius: 50px;
+        }
+    }
+
+    p {
+        width: fit-content;
+    }
+}
