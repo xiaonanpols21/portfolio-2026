@@ -17,12 +17,14 @@ export default async function Me() {
 
     return (
         <main className={`${styles.main}`}>
-            <h1>Xiao Nan Pols</h1>
-            <ul className={`${styles.tags}`}>
-                <li>Creatief</li>
-                <li>Food</li>
-                <li>Gym</li>
-            </ul>
+            <div className={`${styles.meContent}`}>
+                <h1>Xiao Nan Pols</h1>
+                <ul className={`${styles.tags}`}>
+                    <li>Creatief</li>
+                    <li>Food</li>
+                    <li>Gym</li>
+                </ul>
+            </div>
             <Image
                 src="/img/me.jpg"
                 width={353}
