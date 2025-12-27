@@ -47,6 +47,14 @@
     flex-wrap: wrap;
     height: fit-content;
     order: -1;
+
+    li a {
+        @include focus;
+
+        &:focus {
+            border-radius: 50px
+        }
+    }
 }
 
 .faq {
