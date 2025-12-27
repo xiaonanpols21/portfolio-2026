@@ -1,5 +1,6 @@
 import { fetchProjects } from "@/js/fetchProjects";
 import Image from "next/image";
+import Link from "next/link";
 import SocialMedia from "@/components/socialMedia/link";
 import styles from "./me.module.scss";
 export default async function Me() {
@@ -34,7 +35,8 @@ export default async function Me() {
             />
             <section className={`${styles.content}`}>
                 <h2>Front-end developer / Designer</h2>
-                <p>Lorem ipsum dolor sit amet consectetur. Ante pharetra nunc condimentum cras. Ultrices sed nunc ut massa in libero nunc neque. Malesuada placerat tincidunt cras amet. Lorem ipsum dolor sit amet consectetur. Ante pharetra nunc condimentum cras. Ultrices sed nunc ut massa in libero nunc neque. Malesuada placerat tincidunt cras amet.</p>
+                <p>Mijn naam is Xiao Nan Pols en ik heb al meerdere jaren ervaring in webdevelopment. Ik ben gemotiveerd om mezelf verder uit te dagen als front-end developer en om te ontdekken wat er allemaal mogelijk is binnen het web.</p>
+                <p>Ik ben flexibel, gedisciplineerd en werk doelgericht. Daarbij ga ik gedetailleerd te werk om mijn doelen te behalen.</p>
             </section>
             <ul className={`${styles.socialMedia}`}>
                 <li>
@@ -64,6 +66,7 @@ export default async function Me() {
                 <h3 className="visually-hidden">Kenmerken</h3>
                 <details>
                     <summary>toegankelijkheid</summary>
+                    <p>Daarnaast zie ik dat toegankelijkheid online vaak over het hoofd wordt gezien. Ik wil daar graag mijn steentje aan bijdragen. Het is belangrijk dat digitale producten voor iedereen toegankelijk zijn. Om hieraan bij te dragen, kan ik ervoor zorgen dat websites en applicaties inclusiever worden en een breder publiek bedienen.</p>
                 </details>
                 <details>
                     <summary>skills</summary>
@@ -75,6 +78,14 @@ export default async function Me() {
                 </details>
                 <details>
                     <summary>creatief</summary>
+                    <p>Naast mijn passie voor webontwikkeling ben ik ook creatief bezig. Zo heb ik een eigen <Link href="https://xiaodesign.nl/character/">stickershop</Link> waarin ik cartoonversies van klanten maak. Daarnaast werk ik aan een <Link href="https://xiaodesign.nl/obvious/">Webtoon</Link> (online stripverhaal). En tot slot heb ik twee boeken uitgebracht die te bestellen zijn via <Link href="https://www.boekscout.nl/shop2/zoeken?term=xiao+nan+pols">boekscout.nl/yo.</Link></p>
+                    <Image
+                        src="/img/me.gif"
+                        width={500}
+                        height={500}
+                        alt="Xiao Nan Pols Cartoon"
+                        className={`${styles.gif}`}
+                    />
                 </details>
             </section>
        

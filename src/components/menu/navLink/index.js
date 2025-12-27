@@ -13,7 +13,7 @@ export default function NavLink({classes}) {
             <ul>
                 <li><Link className={`${pathname === '/over-mij' ? `${styles.active}` : ''}`} href="/over-mij">Over mij</Link></li>
                 <li><Link className={`${pathname === '/' ? `${styles.active}` : ''}`} href="/">Projecten</Link></li>
-                <li><Link className={`${pathname === '/cv' ? `${styles.active}` : ''}`} href="/cv">C.V</Link></li>
+                <li><Link href="/cv.pdf" target="_blank">C.V</Link></li>
             </ul>
         </nav>
     )
