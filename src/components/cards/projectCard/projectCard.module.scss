@@ -86,11 +86,19 @@
         }
 
         &:hover {
-            background-color: $pink
+            background-color: $pink;
         }
 
         &:hover::before {
             background-image: url("/img/icons/heart-fill.svg");
+        }
+
+        &.liked {
+            background-color: $pink;
+
+            &::before {
+                background-image: url("/img/icons/heart-fill.svg");
+            }
         }
     }
 }
