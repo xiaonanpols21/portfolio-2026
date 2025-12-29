@@ -1,0 +1,130 @@
+@use "../../styles/variables" as *;
+
+.main {
+    @include maxWidthBasic;
+    @include flex(column, 20px);
+    margin-top: $margin-top;
+
+    > ul {
+        @include flex(column, 20px)
+    }
+}
+
+.article {
+    @include flex(column, 30px);
+    position: relative;
+    padding: 20px;
+    background-color: $white;
+    border: $border-basic;
+    border-radius: $boder-radius-basic;
+    color: $black;
+    max-width: 360px;
+
+    h2 {
+        @include f26;
+    }
+
+    p {
+        @include f14;
+        margin-top: -30px
+    }
+
+    .moreInfo {
+       @include arrowBtn;
+       position: absolute;
+       left: 20px;
+       bottom: 20px;
+       z-index: 1;
+    }
+
+    a {
+        @include focus;
+        overflow: hidden;
+        position: relative;
+        margin: auto -20px -20px -20px;
+        height: 160px;
+        width: calc(100% + 40px);
+        border-radius: 0px 0px 0px 20px;
+        border-top: $border-basic;
+
+        &:hover img {
+            scale: 1.1;
+        }
+
+        &:hover .moreInfo::before {
+            background-color: $pink;
+        }
+
+        &:hover .moreInfo::after {
+            filter: $filter-basic;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 0px 0px 0px 20px;
+        transition: $trans-basic;
+    }
+
+    button {
+        @include focus;
+        position: absolute;
+        right: 20px;
+        bottom: calc(160px + -50px/2);
+        width: 50px;
+        aspect-ratio: 1/1;
+        background-color: $pink;
+        border: $border-basic;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: $trans-basic;
+
+        &:focus {
+            border-radius: 50px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            @include centerTransform;
+            width: 24px;
+            aspect-ratio: 1/1;
+            background-image: url("/img/icons/heart-fill.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            transition: $trans-basic;
+        }
+
+        &:hover {
+            background-color: $white;
+        }
+
+        &:hover::before {
+            background-image: url("/img/icons/heart.svg");
+        }
+    }
+}
+
+.tags {
+    @include flex(row, 5px);
+    flex-wrap: wrap;
+    order: -1;
+
+    li {
+        @include tag;
+        @include f14;
+        padding: 3px 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding: 20px;
+
+        > ul {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}
