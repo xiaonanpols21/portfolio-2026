@@ -14,6 +14,7 @@ export default function NavLink({classes}) {
                 <li><Link className={`${pathname === '/over-mij' ? `${styles.active}` : ''}`} href="/over-mij">Over mij</Link></li>
                 <li><Link className={`${pathname === '/' ? `${styles.active}` : ''}`} href="/">Projecten</Link></li>
                 <li><Link href="/cv.pdf" target="_blank">C.V</Link></li>
+                <li><Link className={`${pathname === '/mijn-favorieten' ? `${styles.active}` : ''}`} href="/mijn-favorieten">Mijn favorieten</Link></li>
             </ul>
         </nav>
     )
