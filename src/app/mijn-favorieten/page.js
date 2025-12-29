@@ -37,35 +37,39 @@ export default function Fave() {
         <main className={`${styles.main}`}>
             <h1>Mijn favorieten</h1>
 
-            <ul>
-                {savedFavorite.map((item, key) => (
-                    <li key={key}>
-                        <article className={`${styles.article}`} >
-                            <h2>{item.title}</h2>
-                            <p>{item.goal}</p>
+            {savedFavorite.length === 0 ? (
+                <p>Je hebt nog geen favorieten toegevoegd.</p>
+            ) : (
+                <ul>
+                    {savedFavorite.map((item, key) => (
+                        <li key={key}>
+                            <article className={`${styles.article}`} >
+                                <h2>{item.title}</h2>
+                                <p>{item.goal}</p>
 
-                            <ul  className={`${styles.tags}`} >
-                                {item.tags.map((item, key) => (
-                                    <li key={key}>{item}</li>
-                                ))}
-                            </ul>
+                                <ul  className={`${styles.tags}`} >
+                                    {item.tags.map((item, key) => (
+                                        <li key={key}>{item}</li>
+                                    ))}
+                                </ul>
 
-                            <Link href={`/projecten/${item.slug}`}>
-                                <div>
-                                    <Image
-                                        src={item.img}
-                                        width={500}
-                                        height={500}
-                                        alt={item.title}
-                                    />
-                                </div>
-                                <span className={`${styles.moreInfo}`}>Meer info</span>
-                            </Link>
-                            <button aria-label="Verwijder project knop" onClick={() => removeFromFavorites(item.slug)}></button>
-                        </article>
-                    </li>
-                ))}
-            </ul>
+                                <Link href={`/projecten/${item.slug}`}>
+                                    <div>
+                                        <Image
+                                            src={item.img}
+                                            width={500}
+                                            height={500}
+                                            alt={item.title}
+                                        />
+                                    </div>
+                                    <span className={`${styles.moreInfo}`}>Meer info</span>
+                                </Link>
+                                <button aria-label="Verwijder project knop" onClick={() => removeFromFavorites(item.slug)}></button>
+                            </article>
+                        </li>
+                    ))}
+                </ul>
+            )}
         </main>
     )
 }
