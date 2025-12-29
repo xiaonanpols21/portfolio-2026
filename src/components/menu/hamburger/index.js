@@ -1,32 +1,30 @@
 "use client";
-import { useState } from "react";
 import styles from "./hamburger.module.scss";
 
-export default function Hamburger() {
-    const [checked, setChecked] = useState(false);
+export default function Hamburger({ isMenuOpen, setIsMenuOpen }) {
 
     const handleKeyDown = (e) => {
         if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            setChecked((prev) => !prev);
+            setIsMenuOpen((prev) => !prev);
         }
     };
 
-  return (
-    <label
-      aria-label="Menu knop"
-      className={`hamburger ${styles.hamburger}`}
-      tabIndex={0}
-      onKeyDown={handleKeyDown}
-    >
-        <input
-            type="checkbox"
-            checked={checked}
-            onChange={(e) => setChecked(e.target.checked)}
-        />
-        <span></span>
-        <span></span>
-        <span></span>
-    </label>
-  );
+    return (
+        <label
+            aria-label="Menu knop"
+            className={`hamburger ${styles.hamburger}`}
+            tabIndex={0}
+            onKeyDown={handleKeyDown}
+        >
+            <input
+                type="checkbox"
+                checked={isMenuOpen}
+                onChange={(e) => setIsMenuOpen(e.target.checked)}
+            />
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    );
 }
