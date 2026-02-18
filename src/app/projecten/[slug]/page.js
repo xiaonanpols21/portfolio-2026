@@ -9,6 +9,7 @@ export default async function Project({params}) {
     const data = await fetchProjects();
 
     const { slug } = await params;
+    console.log(slug)
     const item = data.find((item) => item.slug === slug);
 
     const currentIndex = data.findIndex((item) => item.slug === slug);
